@@ -1,4 +1,8 @@
 /* /* CharacterTable.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -9,6 +13,9 @@ table {
 thead {
   background-color: #282c34;
   color: white;
+}
+tfoot td {
+  text-align: center;
 }
 
 th, td {

@@ -1,6 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
 import { fetchCharacterById } from '../api/rickMorty';
-import '../App.css';
 
 const CharacterDetails = ({ id }: { id: string }) => {
   const { data, isLoading } = useQuery({

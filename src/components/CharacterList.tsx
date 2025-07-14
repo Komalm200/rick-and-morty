@@ -1,6 +1,12 @@
 import { Link } from '@tanstack/react-router';
 
-const CharacterList = ({ characters }: { characters: any[] }) => (
+interface Character {
+  id: number | string;
+  name: string;
+  // Add other properties if needed
+}
+
+const CharacterList = ({ characters }: { characters: Character[] }) => (
   <ul>
     {characters.map((char) => (
       <li key={char.id}>

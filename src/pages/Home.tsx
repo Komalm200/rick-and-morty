@@ -1,15 +1,11 @@
-import { useSearch } from '@tanstack/react-router';
 import { useQuery } from '@tanstack/react-query';
-import { fetchCharacters } from '../api/rickMorty';
+import { fetchAllCharacters } from '../api/rickMorty';
 import CharacterTable from '../components/CharacterTable';
-import Pagination from '../components/Pagination';
 
 const Home = () => {
-  const { page = 1 } = useSearch({ from: '/' });
   const { data, refetch, isLoading } = useQuery({
-    queryKey: ['characters', page],
-    queryFn: () => fetchCharacters(page),
-    // keepPreviousData removed for React Query v5+
+    queryKey: ['allCharacters'],
+    queryFn: fetchAllCharacters,
   });
 
   if (isLoading) return <div>Loading...</div>;
@@ -17,9 +13,13 @@ const Home = () => {
 
   return (
     <div>
-      <button onClick={() => refetch()}>Refresh</button>
-      <CharacterTable data={data.results} />
-      <Pagination currentPage={page} totalPages={data.info.pages} />
+      <button
+        onClick={() => refetch()}
+        className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+      >
+        Refresh
+      </button>
+      <CharacterTable data={data} />
     </div>
   );
 };
