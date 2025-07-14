@@ -20,3 +20,4 @@ const characterRoute = createRoute({
 const routeTree = rootRoute.addChildren([homeRoute, characterRoute]);
 
 export const router = createRouter({ routeTree });
+ 

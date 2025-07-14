@@ -90,12 +90,12 @@ const CharacterTable = ({ data }: { data: Character[] }) => {
       </div>
     </td>
   </tr>
-</tfoot>
+</tfoot> 
         <tbody>
           {table.getRowModel().rows.map(row => {
             const characterId = row.original.id;
             return (
-              <tr
+              <tr 
                 key={row.id}
                 onClick={() =>
                   navigate({ to: '/character/$id', params: { id: String(characterId) } })

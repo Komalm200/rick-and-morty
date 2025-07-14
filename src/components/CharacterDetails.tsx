@@ -20,6 +20,6 @@ const CharacterDetails = ({ id }: { id: string }) => {
       <p><strong>Location:</strong> {data.location.name}</p>
     </div>
   );
-};
+}; 
 
 export default CharacterDetails;

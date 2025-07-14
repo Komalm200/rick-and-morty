@@ -6,7 +6,7 @@ export const fetchCharacters = async (page: number) => {
   const res = await axios.get(`${BASE_URL}/character?page=${page}`);
   return res.data;
 };
-
+ 
 export const fetchCharacterById = async (id: string) => {
   const res = await axios.get(`${BASE_URL}/character/${id}`);
   return res.data;

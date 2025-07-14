@@ -6,7 +6,7 @@ const CharacterPage = () => {
  const { id } = useParams({ from: '/character/$id' });
 
  return <CharacterDetails id={id} />;
-};
+}; 
 
 export default CharacterPage;
 

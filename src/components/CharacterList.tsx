@@ -14,7 +14,7 @@ const CharacterList = ({ characters }: { characters: Character[] }) => (
           {char.name}
         </Link>
       </li>
-    ))}
+    ))} 
   </ul>
 );
 export default CharacterList;
